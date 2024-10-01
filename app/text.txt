@@ -1,0 +1,35 @@
+http POST http://localhost:5000/api/generate_credentials client_name="tony_stark"
+http POST http://localhost:5000/api/request_access_token client_id=JnjfJ-hHaeG9Cg jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYWJfZDMyNzc3NzgyMWFhYzgxZjQ4NjQwIiwiZXhwIjoxNzIxMjEwMTQ3fQ.w4ylUCigTUN_7dBexfpnW1oCpWJL9vYGq4WB9F7WccQ
+
+http GET http://localhost:5000/api/data \
+     Authorization:'Bearer E-2gJLkDcjAKH90iWGIvMg'
+
+
+http POST http://127.0.0.1:5000/api/summarize file_path="/Users/macbook/Desktop/llm-deployment_scrty/app/docs/data/243.txt"
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"client_id": "4PM0AEmWmmQTRv57KbdYfMCr", "client_secret": "EYoQs0HgiP6j1iEJED7rJfGkRoSiR2SstEdhHeef9q1E5IGt"}' http://127.0.0.1:5000/api/get_access_token
+
+curl -X POST -H "Content-Type: application/json" -d '{"client_name": "example_client"}'
+
+curl -X POST http://localhost:5000/api/request_access_token \
+     -H "Content-Type: application/json" \
+     -d '{
+           "client_id": "JnjfJ-hHaeG9Cg",
+           "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYWJfZDMyNzc3NzgyMWFhYzgxZjQ4NjQwIiwiZXhwIjoxNzI3NzY5MjY5fQ.PpFlGujtNuT9s0LXtP2TfNT5r4nLF1TctDHsasJr_qU"
+         }'
+
+curl -X GET http://localhost:5000/api/data -H "Authorization: Bearer tqdyVv4L561BxjYTteP4_g"
+
+
+pip show httpie
+export PATH="/Users/macbook/Library/Python/3.9/bin:$PATH"
+source ~/.zshrc
+echo $PATH
+http --version
+
+
+
+ngrok http://localhost:5000 
+http POST https://8f36-2405-201-4019-6161-7905-7fb9-7f15-821.ngrok.io/api/generate_credentials client_name="tony_stark"
