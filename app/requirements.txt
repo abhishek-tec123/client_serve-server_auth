@@ -16,3 +16,4 @@ cryptography
 langchain-community
 langchain-google-genai
 faiss-cpu
+werkzeug>=3.1.4 # not directly required, pinned by Snyk to avoid a vulnerability
