@@ -16,3 +16,4 @@ cryptography
 langchain-community
 langchain-google-genai
 faiss-cpu
+urllib3>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
